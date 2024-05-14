@@ -181,8 +181,8 @@ Recall :  kaynak bozuk demişim bozuk çıkmış / ( kaynak bozuk demişim bozuk
 
 **Evaluation**
 
-Offline evaluation : Evaluate on test data
-Online evaluation : manually label a subset of incoming data to evaluate periodically.
+- Offline evaluation : Evaluate on test data
+- Online evaluation : manually label a subset of incoming data to evaluate periodically.
 asking the initial set of users viewing a newly categorized content if it's correctly classified.
 allow users to report misclassified content by our model.
 
