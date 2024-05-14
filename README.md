@@ -197,6 +197,25 @@ allow users to report misclassified content by our model.
 **Inference**
  we need to think about whether we want to perform batch (offline) or real-time (online) inference.
 
+*Bath Inference*
+- ✅  generate and cache predictions for very fast inference for users.
+- ❌  predictions can become stale if user develops new interests that aren’t captured by the old data that the current predictions are based on.
+
+*Online Inference*
+- Our model need to be served as a seperate service(api endpoint) that can handle incoming requests.
+
+![onlineinference](https://madewithml.com/static/images/mlops/design/online_inference.png)
+
+✅  can ensure more up-to-date predictions which may ensure a more meaningful user experience, etc.
+
+❌  requires managed microservices to handle request traffic.
+❌ requires real time monitoring
+
 **Feedback**
+
+- enforce human-in-loop checks when there is low confidence in classification
+- allow users to report issues related to misclassification
+
+We need to constantly engage with our users to iterate on why our ML system exists and how it can be made better.
 
 ![feedback](https://madewithml.com/static/images/mlops/systems-design/development_cycle.png)
